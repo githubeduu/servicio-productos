@@ -1,0 +1,7 @@
+com\example\servicio_productos\ServicioProductosApplication.class
+com\example\servicio_productos\model\Productos.class
+com\example\servicio_productos\repository\ProductosRepository.class
+com\example\servicio_productos\config\CorsConfig.class
+com\example\servicio_productos\service\ProductoService.class
+com\example\servicio_productos\controller\ProductosController.class
+com\example\servicio_productos\service\ProductoServicelmpl.class
