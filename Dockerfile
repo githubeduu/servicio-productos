@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY target/servicio-productos-0.0.1-SNAPSHOT.jar app.jar
 COPY Wallet_BD_FULLSTACK /app/oracle_wallet/
-EXPOSE 8080
+EXPOSE 8081
 
 CMD ["java", "-jar", "app.jar"]
