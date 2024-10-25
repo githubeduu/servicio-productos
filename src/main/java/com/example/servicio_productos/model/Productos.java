@@ -28,6 +28,9 @@ public class Productos {
     @Column(name = "categoriaid", nullable = false)
     private int categoriaid;
 
+    @Column(name = "stock", nullable = false)
+    private int stock;
+
     // Getters y setters
     public Long getId() {
         return id;
@@ -83,5 +86,13 @@ public class Productos {
 
     public void setCategoriaid(int categoriaid) {
         this.categoriaid = categoriaid;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 }

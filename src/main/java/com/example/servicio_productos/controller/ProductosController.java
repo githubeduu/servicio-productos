@@ -65,9 +65,20 @@ public class ProductosController {
         return ResponseEntity.ok(productos);
     }
 
+
+
+    @PutMapping("/{id}/reducirStock")
+    public ResponseEntity<?> reducirStock(@PathVariable Long id, @RequestParam int cantidad) {
+        productosService.reducirStock(id, cantidad);
+        return ResponseEntity.ok("Stock reducido");
+    }
+    
+
     @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity<?> handleEntityNotFound(EntityNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
+
+
 
 }

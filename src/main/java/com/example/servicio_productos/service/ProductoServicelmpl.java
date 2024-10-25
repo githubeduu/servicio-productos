@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import com.example.servicio_productos.model.Productos;
 import com.example.servicio_productos.repository.ProductosRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class ProductoServicelmpl implements ProductoService {
     
@@ -43,6 +45,11 @@ public class ProductoServicelmpl implements ProductoService {
     @Override
     public void eliminarProducto(Long id) {
         productosRepository.deleteById(id);
+    }
+
+    @Transactional
+    public void reducirStock(Long productoId, int cantidad) {
+        productosRepository.reducirStock(productoId, cantidad);
     }
 
 }
